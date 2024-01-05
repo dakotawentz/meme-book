@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/database'); 
+const sequelize = require('../config/connection'); 
 
 class Meme extends Model {}
 
@@ -18,6 +18,13 @@ Meme.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'user',
+            key: 'id',
+        }
+    }
     },
   {
     sequelize,
