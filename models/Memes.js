@@ -18,9 +18,6 @@ Meme.init(
         type: DataTypes.STRING,
         allowNull: false,
     },
-    comments: {
-        type: DataTypes.TEXT, 
-    },
     },
   {
     sequelize,
