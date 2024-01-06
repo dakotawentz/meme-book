@@ -1,0 +1,66 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>MemeBook</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
+        <link rel="stylesheet" href="./style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <!--- this is where the app logo will go-->
+                <img src="./assets/logo.png" />
+            </div>
+            <div id="logout" class="logout">
+               <a href="/logout">Logout</a>
+            </div>
+        </header>
+        <section class="subheader">
+            <!--- this is where the a login logo will go-->
+            <img class="whatsup-logo" src="./assets/logo.png" />
+            <h2>Welcome! Sign up for MemeBook</h2>
+        </section>
+        <section>
+           <div id="loader" class="loader">
+           </div>
+           <script id="member-template" type="text/x-template">
+            </script>
+           <div id="me" class="me">
+           </div>
+           <div id="membersList" class="members-list">
+           </div>
+           <div id="signup-form" class="tab-content">
+                <div class="header">
+                    <!-- this is where a logo for comments will go-->
+                    <div><img src="./assets/comments.png"></div>
+                    <div class="text">Create A Username</div>
+                </div>
+                <form class="pure-form" id="user-form">
+                    <div class="signup-form">
+                        <div class="left-side">
+                            <div class="row">
+                                <input type="text" required placeholder="enter a username or displayname" id="display_name">
+                            </div>
+                            <div class="row">
+                                <textarea placeholder="enter initial status text" required id="initial_status" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="right-side">
+                            <button 
+                                type="submit" 
+                                class="button-secondary pure-button">Sign up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- node module pusher and js links-->
+        <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+        <script type="text/javascript" src="./app.js"></script>
+    </body>
+</html>
+
+<!-- Create a social network page with create account functionality and interactibility -->
