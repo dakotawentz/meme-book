@@ -4,7 +4,7 @@ const deletePost = async (event) => {
       
     let post = window.location.pathname.split("/");
     
-    const response = await fetch(`/api/post/${post[2]}`, {
+    const response = await fetch(`/api/meme/${post[2]}`, {
       method: "DELETE",
     });
   

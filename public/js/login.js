@@ -1,5 +1,3 @@
-
-
   // Already registered user handler
   const loginFormHandler = async (event) => {
     event.preventDefault();

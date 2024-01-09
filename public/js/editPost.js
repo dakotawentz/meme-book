@@ -8,7 +8,7 @@ const editPost = async (event) => {
   const comment_body = document.getElementById("edit-btn").value.trim();
 
 
-  document.location.assign(`/create/${post[2]}`);
+  document.location.assign(`/createPost/${post[2]}`);
 };
 
 const editButton = document.querySelectorAll("#edit-btn");
