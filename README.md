@@ -2,45 +2,50 @@ https://memebook-b4159625151b.herokuapp.com/
 
 
 Description:
-    Ut occaecat ad ut cupidatat sit elit do ex. Ullamco et laboris duis non veniam velit enim. 
-    Commodo commodo tempor officia nulla.
+    With Memebook we sought out to create a forum specifically for memes. We thought it would be the reddit of memes. Just good memes
+    without the fluff or questionable comments. 
 
 Table of Contents:
     Overview
-    Loprem ipsum
-    Loprem ipsum
-    Loprem ipsum
-    Lorem ipsum
-    Lorem ipsum
-    Loprem Ipsum
+    User Story
+    Usage Instructions
+    Installation Process
+    Screenshot
+    Tools Used
+    Authors
 
 Overview
     The Challenge:
-    Irure dolore laboris pariatur nostrud. Aliquip amet proident labore enim deserunt officia aliquip 
-    officia eiusmod voluptate. Quis mollit ipsum fugiat minim nisi aliquip ullamco fugiat cupidatat officia
-    officia Lorem consequat qui.
+    When we came up with the concept of Memebook we wanted to keep the app simple to use therefore we wanted to use the simplest tools
+    that could carry out the task with ease. The challenge came when we tried to merge our code together. Being students, we had conflicting ideas about 
+    certain tasks, features, etc. and had to come to an agreement in a timely manner. Only having a limited amount of time to work on this and a holiday break in the middle
+    of it did not help either. All in all, we kept our heads down and coded our way through it all. We're excited about what Memebook is and the potential it holds.
 
     User Story
-    As A developer ______
-    I Want a _______
-    SO that I can quickly create a professional
-    README for a new project
+    As a user
+    I want to use a forum focused around memes
+    SO that I can quickly get my dopamine fix.
+    I want to make posts with limited characters
+    SO that the emphasis remains on the memes.
+    I want it to have a "Like" function 
+    SO that trending memes get attention.
+    I want a comment section as well 
+    SO that user interaction is possible.
 
     Usage Instructions:
-        Pariatur et officia voluptate reprehenderit id do eiusmod consectetur in. Aliqua aliquip proident 
-        exercitation elit duis incididunt et amet cillum laborum cillum. Deserunt id laborum excepteur excepteur.
-    
+       In order to access Memebook, upon clicking on the link the user must create an account. Then, 
+       on the home page trending memes will display. In order to view more memes the user simply scrolls down. 
+       If user wants to post a comment or view comments, user will click on 'comment' button and leave a comment that will
+       be limited to 100 characters. 
     Screenshot:
 
     Installation Process:
+    No further installation is required. Memebook can be accessed via link.
 
     Built with:
-        Ipsum sit pariatur proident non ea voluptate reprehenderit qui qui incididunt officia non anim sunt.
-         Occaecat esse mollit enim deserunt. Cillum anim do veniam esse ullamco id culpa labore do laboris
-         non officia dolor nisi. Adipisicing ea irure quis cupidatat voluptate nostrud. Amet commodo 
-         cupidatat occaecat sit eiusmod cupidatat sit mollit ut. Quis nostrud eu laborum reprehenderit nulla 
-         aute non sunt occaecat occaecat elit sit adipisicing adipisicing. Dolore culpa esse velit non nulla 
-         eu pariatur aute enim aliqua eiusmod incididunt.
+        We used Heroku as our deployment app. We did try to use inovative APIs such as 'Pusher' but this is currently still a work in progress.
+        For our front-end we used Handlebars.js + Bulma CDN and Insomnia to test our code. Javascript and Node.js were crucial tools as well.
+         And our most important ingredient - Memebook was built with love<3
 
     Authors:
         Kevin Solis
