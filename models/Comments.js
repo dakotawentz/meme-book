@@ -10,14 +10,29 @@ Comments.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    text: {
+    comment_body: {
         type: DataTypes.TEXT,
         allowNull: false,
+        validate: {
+            len: [1, 125],
+          }
     },
+    user_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: "user",
+          key: "id",
+        }
+    },
+    date_created: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+      },
     meme_id: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'memes',
+            model: 'meme',
             key: 'id',
         }
     }

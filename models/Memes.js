@@ -10,13 +10,18 @@ Meme.init(
         primaryKey: true,
         autoIncrement: true,
     },
-    image: {
+    image: {        
+        type: DataTypes.BLOB('long'),
+        allowNull: true,
+    },
+    caption: {
         type: DataTypes.STRING, 
         allowNull: false,
     },
-    caption: {
-        type: DataTypes.STRING,
+    date_created: {
+        type: DataTypes.DATE,
         allowNull: false,
+        defaultValue: DataTypes.NOW,
     },
     user_id: {
         type: DataTypes.INTEGER,
