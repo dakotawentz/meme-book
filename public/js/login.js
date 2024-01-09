@@ -1,5 +1,3 @@
-
-
   // Already registered user handler
   const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -52,7 +50,7 @@
   // Event Listeners
   document
     .querySelector(".login-form")
-    .addEventListener("click", loginFormHandler);
+    .addEventListener("submit", loginFormHandler);
   
   document
     .querySelector(".signup-form")
