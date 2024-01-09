@@ -13,14 +13,7 @@
   <body>
     <header>      
         <nav class="navbar" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-              <img
-                src="https://bulma.io/images/bulma-logo.png"
-                width="112"
-                height="28"
-              />
-            </a>
+          <div class="navbar-brand">          
 
             <a
               role="button"
@@ -36,11 +29,11 @@
           </div>
           <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
+            {{#if logged_in}}
               <a class="navbar-item">               
                 <a href="#home">Home</a>
               </a>
 
-            {{#if logged_in}}
               <a class="navbar-item">               
                 <a href="#profile">Profile</a>
               </a>
@@ -53,11 +46,8 @@
               <a class="navbar-item">
                 <a href="#Login">Log In</a>
               </a>
-
             
-            </div>
-
-      
+            </div>      
           </div>
         </nav>
          {{/if}}
