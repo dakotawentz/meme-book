@@ -1,6 +1,6 @@
 // Imports
 const router = require("express").Router();
-const { Meme, Comment, User } = require("../../models");
+const { Comment, Meme, User} = require("../../models");
 
 // CREATE Comment
 router.post("/", async (req, res) => {
