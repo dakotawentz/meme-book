@@ -7,6 +7,7 @@
     const password = document.querySelector("#password-login").value.trim();
   
     if (email && password) {
+      console.log('logged in');
       // Send a POST request to the API endpoint
       const response = await fetch("/api/users/login", {
         method: "POST",
@@ -24,6 +25,13 @@
   };
   
   // Sign up handler
+  // Function to show the signup form
+  function showSignupForm() {
+    // Toggle the visibility of the signup form
+    const signupCard = document.getElementById("signup-card");
+    signupCard.classList.toggle("is-hidden");
+  }
+
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -52,8 +60,13 @@
     .querySelector(".login-form")
     .addEventListener("submit", loginFormHandler);
   
-  document
-    .querySelector(".signup-form")
+  // document
+  //   .querySelector(".signup-form")
+  //   .addEventListener("submit", signupFormHandler);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector(".signup-form")
     .addEventListener("submit", signupFormHandler);
+  });
   
     
