@@ -33,7 +33,7 @@
     const password = document.querySelector("#password-signup").value.trim();
   
     if (firstName && lastName && email && password) {
-      const response = await fetch("/", {
+      const response = await fetch("/api/users", {
         method: "POST",
         body: JSON.stringify({ firstName, lastName, email, password }),
         headers: { "Content-Type": "application/json" },
@@ -55,5 +55,10 @@
   document
     .querySelector(".signup-form")
     .addEventListener("submit", signupFormHandler);
+
+    // document.querySelector("#signup").addEventListener("click", function() {
+      
+    //   document.querySelector('#signup-page').removeAttribute( 'class','is-hidden');
+    // });
   
     
