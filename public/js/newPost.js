@@ -6,7 +6,7 @@ async function createNewPost(event) {
     const description = document.querySelector("#post-description").value.trim();
   
     if (description) {
-      const response = await fetch(`/api/post`, {
+      const response = await fetch(`/api/meme`, {
         method: "POST",
         body: JSON.stringify({
           
@@ -18,7 +18,7 @@ async function createNewPost(event) {
       });
   
       if (response.ok) {
-        document.location.replace("/home");
+        document.location.replace("/homepage");
       } else {
         alert(response.statusText);
       }
