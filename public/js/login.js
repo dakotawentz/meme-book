@@ -1,5 +1,3 @@
-
-
   // Already registered user handler
   const loginFormHandler = async (event) => {
     event.preventDefault();
@@ -35,7 +33,7 @@
     const password = document.querySelector("#password-signup").value.trim();
   
     if (firstName && lastName && email && password) {
-      const response = await fetch("/api/users", {
+      const response = await fetch("/", {
         method: "POST",
         body: JSON.stringify({ firstName, lastName, email, password }),
         headers: { "Content-Type": "application/json" },

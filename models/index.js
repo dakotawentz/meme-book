@@ -1,6 +1,6 @@
 const Meme = require('./Memes');
 const User = require('./User');
-const Comments = require('./Comments');
+const Comment = require('./Comments');
 
 Meme.belongsTo(User, {
     foreignKey: 'user_id',
@@ -10,20 +10,20 @@ User.hasMany(Meme, {
     foreignKey: 'user_id',
 });
 
-Comments.belongsTo(User, {
+Comment.belongsTo(User, {
     foreignKey: 'user_id',
 });
 
-User.hasMany(Comments, {
+User.hasMany(Comment, {
     foreignKey: 'user_id',
 });
 
-Comments.belongsTo(Meme, {
+Comment.belongsTo(Meme, {
     foreignKey: 'meme_id',
 });
 
-Meme.hasMany(Comments, {
+Meme.hasMany(Comment, {
     foreignKey: 'meme_id',
 });
 
-module.exports = { User, Meme, Comments };
+module.exports = { User, Meme, Comment };

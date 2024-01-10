@@ -1,18 +1,18 @@
 <div class="container is-max-desktop">
   <div class="notification">
-    {{#each memePosts as |memePost|}}
+    {{#each memes as |meme|}}
       <div class="card">
         <div class="card-header">
           <h3>
-            <a href="/memePost/{{memePost.id}}">{{memePost.title}}</a>
+            <a href="/meme/{{meme.id}}">{{ }}</a>
           </h3>
           <p>Posted by
             {{user.first-name}}
             on
-            {{format_date memePost.date_created}}</p>
+            {{format_date meme.date_created}}</p>
         </div>
         <div class="card-content">
-          <p>{{memePost.description}}</p>
+          <p>{{meme.caption}}</p>
         </div>
       </div>
     {{/each}}
