@@ -29,10 +29,10 @@
       </div>
 
       <div class="card-content">
-        {{#if memePosts.length}} 
+        {{#if meme.length}} 
 
-        {{#each memePosts as |memePost|}} 
-        {{> profilePost memePost}}
+        {{#each memes as |meme|}} 
+        {{> profilePost meme}}
         <br />
         {{/each}} 
         

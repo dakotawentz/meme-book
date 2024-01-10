@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meme-Book</title>
+    <title>Memebook</title>
     {{! Bulma link }}
     <link
       rel="stylesheet"
@@ -27,24 +28,26 @@
               <span aria-hidden="true"></span>
             </a>
           </div>
-          <div id="navbarBasicExample" class="navbar-menu">
+          <div id="navbarBasicExample" class="navbar-menu is-active">
             <div class="navbar-start">
             {{#if logged_in}}
               <a class="navbar-item">               
-                <a href="#home">Home</a>
+                <a href="/">Home</a>
               </a>
 
               <a class="navbar-item">               
-                <a href="#profile">Profile</a>
+                <a href="/profile">Profile</a>
               </a>
 
               <a class="navbar-item">
-                <a href="#Sign out">Sign Out</a>                
+                <p class="control">
+                  <button class="button is-success " type="submit" id="logout">Logout</button>
+                </p>                
               </a>
              {{else}}
             
               <a class="navbar-item">
-                <a href="#Login">Log In</a>
+                <a href="/login">Log In</a>
               </a>
             
             </div>      
