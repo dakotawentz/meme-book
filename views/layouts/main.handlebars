@@ -32,11 +32,11 @@
             <div class="navbar-start">
             {{#if logged_in}}
               <a class="navbar-item">               
-                <a href="/views/homepage.handlebars">Home</a>
+                <a href="/">Home</a>
               </a>
 
               <a class="navbar-item">               
-                <a href="/views/profile.handlebars">Profile</a>
+                <a href="/profile">Profile</a>
               </a>
 
               <a class="navbar-item">
@@ -47,7 +47,7 @@
              {{else}}
             
               <a class="navbar-item">
-                <a href="/views/login.handlebars">Log In</a>
+                <a href="/login">Log In</a>
               </a>
             
             </div>      
@@ -60,7 +60,7 @@
       {{{body}}}
     </main>
     {{#if logged_in}}
-      <script src="/public/js/login.js"></script>
+      <script src="/js/logout.js"></script>
     {{/if}}
   </body>
 </html>
