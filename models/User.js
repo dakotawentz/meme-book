@@ -16,6 +16,10 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    image: {
+      type: DataTypes.BLOB("long"),
+      allowNull: true,
+    },
     first_name: {
       type: DataTypes.STRING,
       allowNull: false,
