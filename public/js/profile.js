@@ -1,11 +1,11 @@
 document.addEventListener( "DOMContentLoad", function () {
     // Sample data for the profile
-    const profileData = {
-        firstName: "Ema",
-        email: "ema@example.com",
-        bio: "Full stack developer.",
-        profilePicture: ""
-    };
+    // const profileData = {
+    //     firstName: "Ema",
+    //     email: "ema@example.com",
+    //     bio: "Full stack developer.",
+    //     profilePicture: ""
+    // };
     
     // get handlebars template
     const profileTemplate = document.getElementById("profile-template").innerHTML;
