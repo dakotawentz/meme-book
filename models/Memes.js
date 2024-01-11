@@ -12,7 +12,7 @@ Meme.init(
     },
     image: {
       type: DataTypes.BLOB("long"),
-      allowNull: true,
+      allowNull: false,
     },
     caption: {
       type: DataTypes.STRING,
@@ -20,8 +20,8 @@ Meme.init(
     },
     date_created: {
       type: DataTypes.DATE,
-      allowNull: false,
       defaultValue: DataTypes.NOW,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
