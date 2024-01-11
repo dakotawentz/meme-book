@@ -41,13 +41,20 @@
     const password = document.querySelector("#password-signup").value.trim();
   
     if (firstName && lastName && email && password) {
-      const response = await fetch("/", {
+      const response = await fetch("/api/users", {
         method: "POST",
         body: JSON.stringify({ firstName, lastName, email, password }),
         headers: { "Content-Type": "application/json" },
       });
+
+      console.log(response);
   
       if (response.ok) {
+        // Retrieve user data after successful signup
+        const userData = await response.json();
+        // Store user data in local storage
+        localStorage.setItem("user", JSON.stringify(userData));
+        console.log("redirecting to new user profile...");
         document.location.replace("/");
       } else {
         alert(response.statusText);
