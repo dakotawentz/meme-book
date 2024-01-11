@@ -1,16 +1,17 @@
 // Function allow users to create new posts
 async function createNewPost(event) {
+  console.log("CLICKED");
     event.preventDefault();
   
     // const title = document.querySelector("#titleInput").value.trim();
-    const description = document.querySelector("#post-description").value.trim();
+    const caption = document.querySelector("#post-caption").value.trim();
+    console.log(caption, "caption");
   
-    if (description) {
+    if (caption) {
       const response = await fetch(`/api/meme`, {
         method: "POST",
-        body: JSON.stringify({
-          
-          description,
+        body: JSON.stringify({  
+          caption,
         }),
         headers: {
           "Content-Type": "application/json",
