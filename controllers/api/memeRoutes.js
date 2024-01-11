@@ -3,6 +3,17 @@ const router = require("express").Router();
 const { Meme } = require("../../models");
 const withAuth = require("../../utils/auth");
 
+// GET route to retrieve all memes
+router.get('/memes', async (req, res) => {
+  try {
+    const memes = await Meme.findAll();
+    res.json(memes);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
 // Route to create a new mem post
 router.post("/", withAuth, async (req, res) => {
   
