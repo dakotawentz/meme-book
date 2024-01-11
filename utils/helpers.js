@@ -12,3 +12,9 @@ module.exports = {
     },
   };
   
+
+const Handlebars = require('handlebars');
+
+Handlebars.registerHelper('is_my_page', (currentPageUserId, loggedInUserId) => {
+  return currentPageUserId === loggedInUserId;
+});

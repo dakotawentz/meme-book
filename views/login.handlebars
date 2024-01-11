@@ -25,13 +25,17 @@
           </div>
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <button class="button is-success" type="submit">Login</button>
-              <br>
-              <br>
-              <p>OR</p>
-              <br>
-              <br>
-              <button class="button is-success " type="submit">Signup</button>
+              <form class="login-form">
+                <button class="button is-success" onclick="submit">Login</button>
+                  </form>
+                    <br>
+                      <br>
+                        <p>OR   </p>
+                      <br>
+                    <br>
+                  <form class="signup-form">
+                <button class="button is-success " onclick="showSignupForm()">Signup</button>
+              </form>
             </p>
           </div>
         </form>
@@ -39,7 +43,7 @@
     </div>
 
     <!-- sign up form -->
-    <div class="card columns is-centered is-hidden">
+    <div class="card columns is-centered is-hidden" id="signup-card">
       <div class="card-content">
         <h2>Sign Up</h2>
         <form class="content signup-form">

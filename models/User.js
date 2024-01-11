@@ -43,6 +43,10 @@ User.init(
         len: [8],
       },
     },
+    // bio: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
   },
   {
     hooks: {
@@ -64,3 +68,4 @@ User.init(
 );
 
 module.exports = User;
+
