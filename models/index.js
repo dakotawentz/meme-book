@@ -12,6 +12,8 @@ User.hasMany(Meme, {
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
+    as: 'user',
+    targetKey: 'id',
 });
 
 User.hasMany(Comment, {
