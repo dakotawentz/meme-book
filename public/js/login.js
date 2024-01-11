@@ -7,6 +7,7 @@
     const password = document.querySelector("#password-login").value.trim();
   
     if (email && password) {
+      console.log('logged in');
       // Send a POST request to the API endpoint
       const response = await fetch("/api/users/login", {
         method: "POST",
@@ -24,6 +25,13 @@
   };
   
   // Sign up handler
+  // Function to show the signup form
+  function showSignupForm() {
+    // Toggle the visibility of the signup form
+    const signupCard = document.getElementById("signup-card");
+    signupCard.classList.toggle("is-hidden");
+  }
+
   const signupFormHandler = async (event) => {
     event.preventDefault();
   
@@ -38,8 +46,15 @@
         body: JSON.stringify({ firstName, lastName, email, password }),
         headers: { "Content-Type": "application/json" },
       });
+
+      console.log(response);
   
       if (response.ok) {
+        // Retrieve user data after successful signup
+        const userData = await response.json();
+        // Store user data in local storage
+        localStorage.setItem("user", JSON.stringify(userData));
+        console.log("redirecting to new user profile...");
         document.location.replace("/");
       } else {
         alert(response.statusText);
@@ -52,13 +67,12 @@
     .querySelector(".login-form")
     .addEventListener("submit", loginFormHandler);
   
-  document
-    .querySelector(".signup-form")
-    .addEventListener("submit", signupFormHandler);
+  // document
+  //   .querySelector(".signup-form")
+  //   .addEventListener("submit", signupFormHandler);
 
-    // document.querySelector("#signup").addEventListener("click", function() {
-      
-    //   document.querySelector('#signup-page').removeAttribute( 'class','is-hidden');
-    // });
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector(".signup-form")
+    .addEventListener("submit", signupFormHandler);
   
     
