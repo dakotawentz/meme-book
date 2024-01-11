@@ -1,5 +1,8 @@
 [
   {
+    "image": {
+      "directory": "/images/sunset-1287550.jpg"
+    },
     "first_name": "Sal",
     "last_name": "John",
     "email": "sal@hotmail.com",

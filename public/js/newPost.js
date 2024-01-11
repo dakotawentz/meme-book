@@ -3,21 +3,23 @@ async function createNewPost(event) {
   event.preventDefault();
 
   // const title = document.querySelector("#titleInput").value.trim();
-  const description = document.querySelector("#post-description").value.trim();
+  const caption = document.querySelector("#post-description").value.trim();
+  const image = document.querySelector('#imageInput').files[0];
 
-  if (description) {
-    const response = await fetch(`/api/meme`, {
+  if (caption) {
+    const response = await fetch('/api/meme', {
       method: "POST",
       body: JSON.stringify({
-        description,
-      }),
+        caption,
+      }), 
+      image,
       headers: {
         "Content-Type": "application/json",
       },
     });
 
     if (response.ok) {
-      document.location.replace("/meme");
+      document.location.replace("/");
     } else {
       alert(response.statusText);
     }

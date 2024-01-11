@@ -4,10 +4,11 @@
       <div class="card">
         <div class="card-header">
           <h3>
-            <a href="/meme/{{meme.meme_id}}">{{meme.caption}}</a>
+            <a href="/meme/{{meme.meme_id}}"></a>
+                {{!-- {{meme.caption}} --}}
           </h3>
           <p>Posted by
-            {{user.first-name}}
+            {{user_id.first_name}}
             on
             {{format_date meme.date_created}}</p>
         </div>
