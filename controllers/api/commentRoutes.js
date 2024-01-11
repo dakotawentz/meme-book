@@ -2,23 +2,6 @@
 const router = require("express").Router();
 const { Comment, Meme, User} = require("../../models");
 
-// CREATE Comment
-router.post("/", async (req, res) => {
-  try {
-    
-    const comment = await Comment.create({
-      comment_body: req.body.comment_body,
-      meme_id: req.body.meme_id,
-      user_id: req.session.user_id || req.body.user_id,
-    });
-
-    res.status(200).json(comment);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json(err);
-  }
-});
-
 // READ all Comments
 router.get("/", async (req, res) => {
   try {
@@ -39,6 +22,24 @@ router.get("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// CREATE Comment
+router.post("/", async (req, res) => {
+  try {
+    
+    const comment = await Comment.create({
+      comment_body: req.body.comment_body,
+      meme_id: req.body.meme_id,
+      user_id: req.session.user_id || req.body.user_id,
+    });
+
+    res.status(200).json(comment);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json(err);
+  }
+});
+
 
 // UPDATE Comment
 router.put("/:id", async (req, res) => {
