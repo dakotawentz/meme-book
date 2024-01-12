@@ -1,46 +1,54 @@
-
-     <!-- sign in form  -->
-    <div class="card columns is-centered ">
-      <div class="card-content">
-        <h2>Log In to Memebook</h2>
-        <form class="content login-form">
-          <div class="field">
-            <p class="control has-icons-left has-icons-right">
-              <input class="input" type="email" placeholder="Email" id="email-login" />
-              <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-              <span class="icon is-small is-right">
-                <i class="fas fa-check"></i>
-              </span>
-            </p>
-          </div>
-          <div class="field">
-            <p class="control has-icons-left">
-              <input class="input" type="password" placeholder="Password" id="password-login"/>
-              <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-            </p>
-          </div>
-          <div class="field is-grouped is-grouped-centered">
-            <p class="control">
-              <form class="login-form">
-                <button class="button is-success" onclick="submit">Login</button>
-                  </form>
-                    <br>
-                      <br>
-                        <p>OR   </p>
-                      <br>
-                    <br>
-                  <form class="signup-form">
-                <button class="button is-success " onclick="showSignupForm()">Signup</button>
-              </form>
-            </p>
-          </div>
-        </form>
+<!-- sign in form  -->
+<div class="card columns is-centered">
+  <div class="card-content">
+    <h2>Log In to Memebook</h2>
+    <form class="content login-form">
+      <div class="field">
+        <p class="control has-icons-left has-icons-right">
+          <input
+            class="input"
+            type="email"
+            placeholder="Email"
+            id="email-login"
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right">
+            <i class="fas fa-check"></i>
+          </span>
+        </p>
       </div>
-    </div>
+      <div class="field">
+        <p class="control has-icons-left">
+          <input
+            class="input"
+            type="password"
+            placeholder="Password"
+            id="password-login"
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field is-grouped is-grouped-centered">
+        <p class="control">
+          <button class="button is-success is-small" onclick="submit">Login</button>
+          <br />
+          <br />
+          <p>OR</p>
+          <br />
+          <br />
+          <form class="signup-form">
+            <button
+              class="button is-success"onclick="showSignupForm()">Signup</button>
+          </form>
+        </p>
+      </div>
+    </form>
+  </div>
+</div>
 
     <!-- sign up form -->
     <div class="card columns is-centered is-hidden" id="signup-card">
@@ -84,14 +92,12 @@
           </div>
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <button class="button is-success" onclick="signupFormHandler()">Signup</button>
+              <button class="button is-success " type="submit">Signup</button>
             </p>
           </div>
         </form>
       </div>
     </div>
-
-
 
 <script src="/js/login.js"></script>
 <script src="/js/sideMenu.js"></script>

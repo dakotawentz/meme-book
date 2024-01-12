@@ -1,30 +1,55 @@
     <div class="card columns is-centered" id="profile-template">
       <div class="card-image">
         <figure class="image is-128x128">
-          <img src="{{ img }}" alt="Profile Picture" />
+          <img src="{{ image }}" alt="Profile Picture" />
         </figure>
       </div>
       <div class="card-content">
         <div class="media">          
           <div class="media-content">
             <h2><a href="/meme/{{id}}">{{ id }}</a></h2>
-            <p class="title is-4">Posted by {{user.first_name}} on {{format_date date_created}}</p>
+            <p class="title is-4">Post by {{user.first_name}} on {{format_date date_created}}</p>
             <p class="subtitle is-6">{{caption}}</p>
           </div>
-        </div>       
+        </div>   
         
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <button class="button is-success" id="edit-btn" data-id="{{ id }}">Edit</button>
+              <button class="button is-success is-small" id="edit-btn" data-id="{{ id }}">Edit</button>
             </p>
             <p class="control">
-                <button class="button is-success" type="submit" id="delete-btn" data-id="{{ id }}">Delete</button>
+                <button class="button is-success is-small" type="submit" id="delete-btn" data-id="{{ id }}">Delete</button>
               </p>
           </div>
+          <div class="box columns is-centered">
+  <article class="media">
+    <!-- <figure class="media-left">
+              <p class="image is-64x64">
+                <img src="https://bulma.io/images/placeholders/128x128.png">
+              </p>
+            </figure> -->
+    <div class="media-content" id="comment-form">
+      <div class="field">
+        <p class="control">
+          <textarea
+            class="textarea"
+            placeholder="Add a comment..."
+            id="comment"
+          ></textarea>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <button type="submit" class="button is-normal">Comment</button>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
        
         </div>
       </div>
     </div>
 
-<script src="/public/js/profile.js"></script>
+{{!-- <script src="/js/profile.js"></script> --}}
  
