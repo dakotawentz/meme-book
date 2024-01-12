@@ -7,10 +7,10 @@
             <p>{{caption}}</p>
             <div class="field is-grouped is-grouped-centered">
                 <p class="control">
-                  <button class="button is-success" id="edit-btn">Edit</button>
+                  <button class="button is-success is-small" id="edit-btn">Edit</button>
                 </p>
                 <p class="control">
-                    <button class="button is-success" id="delete-btn">Delete</button>
+                    <button class="button is-success is-small" id="delete-btn">Delete</button>
                   </p>
               </div>
           </div>          
@@ -21,15 +21,14 @@
             {{ #each comments as |comment| }}
             <div>
                 <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date comment.date_created}}</p>
-
+                  {{> comment-form}}
             </div>
             {{/each}}
           </div>
-        </div>
-        <!-- {{/each}} -->
+        </div>       
       </div>
     </div>
-    {{> comment-form}}
+    
     <script src="/js/newComment.js"></script>
     <script src="/js/deletePost.js"></script>
     <script src="/js/editPost.js"></script>

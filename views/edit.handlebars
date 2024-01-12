@@ -1,4 +1,4 @@
-{{!-- create post --}}
+{{!-- edit post --}}
 <div class="container">
       <div class="notification ">        
           <form class="card-content" id="create-post">
@@ -9,33 +9,21 @@
                     <textarea
                       class="textarea"
                       placeholder="Add a post..." id="post-description"
-                    ></textarea>
+                    >{{ caption }}</textarea>
                   </p>
                 </div>
                 <div class="field">
                   <p class="control">
                     <button type="submit" class="button is-normal">Post</button>
                   </p>
-                  <div class="file is-small">
-                <label class="file-label">
-                <input class="file-input" type="file" name="resume" id="imageInput">
-                <span class="file-cta">
-                    <span class="file-icon">
-                <i class="fas fa-upload"></i>
-                </span>
-              <span class="file-label">
-               Upload Image
-            </span>
-           </span>
-          </label>
-              </div>
                 </div>
+                
               </div>
           </form>
         </div>        
       </div>
     </div>
 
- <script src="/js/newPost.js"></script>
+ {{!-- <script src="/js/profile.js"></script> --}}
     
  
