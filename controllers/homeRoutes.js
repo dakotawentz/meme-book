@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment, Meme, User } = require('../models');
+const { Comment, Meme, User } = require('../models')
 const withAuth = require('../utils/auth');
 
 //get all meme posts and join with user data and comment
