@@ -1,21 +1,26 @@
 <div class="container is-max-desktop">
   <div class="notification">
     {{#each memes as |meme|}}
-      <div class="card">
-        <div class="card-header">
-          <h3>
-            <a href="/meme/{{meme.meme_id}}"></a>
-                {{!-- {{meme.caption}} --}}
-          </h3>
-          <p>Posted by
-            {{meme.user.first_name}}
-            on
-            {{format_date meme.date_created}}</p>
-        </div>
-        <div class="card-content">
-          <p>{{meme.caption}}</p>
-        </div>
+    <div class="card">
+      <div class="card-header">
+        <h3 class="is-hidden">
+          <a href="/meme/{{meme.meme_id}}"></a>
+          {{!-- {{meme.caption}} --}}
+        </h3>
+        <p>Posted by
+          {{meme.user.first_name}}
+          on
+          {{format_date meme.date_created}}</p>
       </div>
+      <div>
+        {{meme.image}}
+      </div>
+      <div class="card-content">
+        {{#each memes as |meme|}}
+        {{> meme-details}}
+        {{/each}}
+      </div>
+    </div>
     {{/each}}
   </div>
 </div>

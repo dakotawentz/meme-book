@@ -11,7 +11,7 @@ Meme.init(
       autoIncrement: true,
     },
     image: {
-      type: DataTypes.BLOB("long"),
+      type: DataTypes.STRING,
       allowNull: true,
     },
     caption: {
@@ -20,8 +20,8 @@ Meme.init(
     },
     date_created: {
       type: DataTypes.DATE,
-      allowNull: false,
       defaultValue: DataTypes.NOW,
+      allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,

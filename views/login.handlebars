@@ -34,7 +34,7 @@
       </div>
       <div class="field is-grouped is-grouped-centered">
         <p class="control">
-          <button class="button is-success is-small" onclick="submit">Login</button>
+          <button class="button is-success is-normal" onclick="submit">Login</button>
           <br />
           <br />
           <p>OR</p>
@@ -42,7 +42,7 @@
           <br />
           <form class="signup-form">
             <button
-              class="button is-success"onclick="showSignupForm()">Signup</button>
+              class="button is-success is-normal"onclick="showSignupForm()">Signup</button>
           </form>
         </p>
       </div>
@@ -50,74 +50,54 @@
   </div>
 </div>
 
-<!-- sign up form -->
-<div class="card columns is-centered is-hidden" id="signup-card">
-  <div class="card-content">
-    <h2>Sign Up</h2>
-    <form class="content signup-form">
-      <!-- First name -->
-      <div class="field">
-        <label class="label">First Name</label>
-        <div class="control">
-          <input
-            class="input"
-            type="text"
-            placeholder="e.g Alex"
-            id="signup-first-name"
-          />
-        </div>
+    <!-- sign up form -->
+    <div class="card columns is-centered is-hidden" id="signup-card">
+      <div class="card-content">
+        <h2>Sign Up</h2>
+        <form class="content signup-form">
+          <!-- First name -->
+          <div class="field">
+            <label class="label">First Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g Alex" id="signup-first-name"/>
+            </div>
+          </div>
+          <!-- Last Name -->
+          <div class="field">
+            <label class="label">Last Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g Alex" id="signup-last-name" />
+            </div>
+          </div>
+          <!-- email -->
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="email" placeholder="Email" id="email-signup"/>
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+              <span class="icon is-small is-right">
+                <i class="fas fa-check"></i>
+              </span>
+            </p>
+          </div>
+          <!-- password -->
+          <div class="field">
+            <p class="control has-icons-left">
+              <input class="input" type="password" placeholder="Password" id="password-signup"/>
+              <span class="icon is-small is-left">
+                <i class="fas fa-lock"></i>
+              </span>
+            </p>
+          </div>
+          <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+              <button class="button is-success " type="submit">Signup</button>
+            </p>
+          </div>
+        </form>
       </div>
-      <!-- Last Name -->
-      <div class="field">
-        <label class="label">Last Name</label>
-        <div class="control">
-          <input
-            class="input"
-            type="text"
-            placeholder="e.g Alex"
-            id="signup-last-name"
-          />
-        </div>
-      </div>
-      <!-- email -->
-      <div class="field">
-        <p class="control has-icons-left">
-          <input
-            class="input"
-            type="email"
-            placeholder="Email"
-            id="email-signup"
-          />
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </p>
-      </div>
-      <!-- password -->
-      <div class="field">
-        <p class="control has-icons-left">
-          <input
-            class="input"
-            type="password"
-            placeholder="Password"
-            id="password-signup"
-          />
-          <span class="icon is-small is-left">
-            <i class="fas fa-lock"></i>
-          </span>
-        </p>
-      </div>
-      <div class="field is-grouped is-grouped-centered">
-        <p class="control">
-          <button class="button is-success" type="submit">Signup</button>
-        </p>
-      </div>
-    </form>
-  </div>
-</div>
+    </div>
 
 <script src="/js/login.js"></script>
 <script src="/js/sideMenu.js"></script>
