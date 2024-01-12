@@ -1,6 +1,6 @@
 const Meme = require('./Memes');
 const User = require('./User');
-const Comment = require('./comments');
+const Comment = require('./Comments');
 
 Meme.belongsTo(User, {
     foreignKey: 'user_id',
