@@ -3,8 +3,11 @@ async function createNewPost(event) {
   event.preventDefault();
 
   // const title = document.querySelector("#titleInput").value.trim();
-  const caption = document.querySelector("#post-description").value.trim();
-  const image = document.querySelector('#imageInput').files[0];
+  const caption = document.querySelector("#post-caption").value.trim();
+  const image = document.querySelector("#imageInput").value.trim();
+
+  console.log(caption);
+  // const image = document.querySelector('#imageInput').files[0];
 
   if (caption) {
     const response = await fetch('/api/meme', {
