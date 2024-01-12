@@ -11,7 +11,7 @@ Meme.init(
       autoIncrement: true,
     },
     image: {
-      type: DataTypes.BLOB("long"),
+      type: DataTypes.STRING,
       allowNull: true,
     },
     caption: {
