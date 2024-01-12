@@ -16,6 +16,7 @@
       });
   
       if (response.ok) {
+        console.log(response);
         // If successful, redirect the browser to the home page
         document.location.replace("/");
       } else {

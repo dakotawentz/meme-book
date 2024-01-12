@@ -1,4 +1,5 @@
 https://memebook-b4159625151b.herokuapp.com/
+https://docs.google.com/presentation/d/1m42rSKuT_eGZJWBQQZWXVTT3yQe1vdIS8Cb_yDYcIXg/edit#slide=id.g2ae659ccf5d_2_0
 
 
 Description:
