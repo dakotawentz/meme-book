@@ -4,7 +4,13 @@ const { User } = require("../../models");
 // Posts new user data to database
 router.post("/", async (req, res) => {
   try {
-    const userData = await User.create(req.body);
+    const{firstName, lastName, email, password} = req.body;
+    const userData = await User.create({
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      password,
+    });
     console.log("POST /users:", req.body);
 
     req.session.save(() => {
