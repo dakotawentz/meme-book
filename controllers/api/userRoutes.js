@@ -8,14 +8,14 @@ const { User } = require("../../models");
 router.post("/", async (req, res) => {
   try {
     const userData = await User.create(req.body);
-    // console.log("POST /users:", req.body);
-    // userDB.push(req.body);
+    console.log("POST /users:", req.body);
+    userDB.push(req.body);
 
-    // FileSystem.writeFile("seeds/userData.json", JSON.stringify(userDB), function (err) {
-    //   if (err) throw err;
+    FileSystem.writeFile("seeds/userData.json", JSON.stringify(userDB), function (err) {
+      if (err) throw err;
 
-    //   res.json(userDB);
-    // });
+      res.json(userDB);
+    });
 
     req.session.save(() => {
       req.session.user_id = userData.id;
