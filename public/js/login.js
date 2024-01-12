@@ -51,12 +51,7 @@
   
       if (response.ok) {
         document.location.replace('/');
-        // Retrieve user data after successful signup
-        // const userData = await response.json();
-        // Store user data in local storage
-        // localStorage.setItem("user", JSON.stringify(userData));
-        // console.log("redirecting to new user profile...");
-        // document.location.replace("/");
+       
       } else {
         alert(response.statusText);
       }
@@ -66,12 +61,8 @@
   // Event Listeners
   document
     .querySelector(".login-form")
-    .addEventListener("submit", loginFormHandler);
+    .addEventListener("submit", loginFormHandler);  
   
-  // document
-  //   .querySelector(".signup-form")
-  //   .addEventListener("submit", signupFormHandler);
-
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(".signup-form")
     .addEventListener("submit", signupFormHandler);

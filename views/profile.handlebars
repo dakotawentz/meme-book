@@ -10,22 +10,13 @@
             </figure> 
           </div>
           <div class="media-content">
-            <p class="title is-4">{{first_name}}</p>
-            <p class="subtitle is-6">{{email}}</p>
-          </div>
-        </div>
-
-        <div class="content">
-          <p>Bio: {{bio}}</p>
+            <p class="title is-4">{{first_name}} {{ last_name }}</p>
+            <p class="subtitle is-6">Email: {{email}}</p>
+            <p>Bio: {{bio}}</p>
           <br />          
         </div>
-        
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <h2 id="memeName">{{first_name}}'s meme</h2>
-        </div>
-      </div>
+          </div>
+        </div>       
 
       <div class="card-content">
         {{#if memes.length}} 
@@ -40,7 +31,7 @@
     </div>
     {{#if (is_my_page user.id userId)}}
     <div class="container">
-      <div class="card columns is-half">
+      <div class="card columns is-centered">
         <a href="/create"
           ><button class="button is-success is-small">Create a Post</button></a
         >

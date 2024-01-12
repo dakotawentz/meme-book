@@ -13,7 +13,7 @@ async function newCommentHandler(event) {
       const response = await fetch("/api/comment", {
         method: "POST",
         body: JSON.stringify({
-          post_id,
+          meme_id,
           comment_body,
         }),
         headers: {

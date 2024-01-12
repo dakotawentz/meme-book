@@ -21,15 +21,14 @@
             {{ #each comments as |comment| }}
             <div>
                 <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date comment.date_created}}</p>
-
+                  {{> comment-form}}
             </div>
             {{/each}}
           </div>
-        </div>
-        <!-- {{/each}} -->
+        </div>       
       </div>
     </div>
-    {{> comment-form}}
+    
     <script src="/js/newComment.js"></script>
     <script src="/js/deletePost.js"></script>
     <script src="/js/editPost.js"></script>
