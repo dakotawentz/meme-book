@@ -1,50 +1,33 @@
-    <div class="card columns is-centered" id="profile-template">
-      <div class="card-image">
+<div class="card columns is-centered" id="profile-template">
+      {{!-- <div class="card-image">
         <figure class="image is-128x128">
           <img src="{{ image }}" alt="Profile Picture" />
         </figure>
-      </div>
+      </div> --}}
       <div class="card-content">
         <div class="media">          
           <div class="media-content">
-            <h2><a href="/meme/{{id}}"></a></h2>
+            <a href="/meme/{{id}}">
             <p class="subtitle is-6">Post by {{user.first_name}} on {{format_date date_created}}</p>
-            <p class="title 4">{{caption}}</p>
+            <p class="title 4">{{image}}{{caption}}</p>
+            </a>
           </div>
         </div>   
         
           <div class="field is-grouped is-grouped-centered">
             <p class="control">
-              <button class="button is-success is-small" id="edit-btn" data-id="{{ id }}">Edit</button>
+              <button class="button is-success is-small" type="submit" id="edit-btn" data-id="{{ id }}">Edit</button>
             </p>
             <p class="control">
                 <button class="button is-success is-small" type="submit" id="delete-btn" data-id="{{ id }}">Delete</button>
               </p>
-          </div>
-          <div class="box columns is-centered">
-  <article class="media">
-    <div class="media-content" id="comment-form">
-      <div class="field">
-        <p class="control">
-          <textarea
-            class="textarea"
-            placeholder="Add a comment..."
-            id="comment"
-          ></textarea>
-        </p>
-      </div>
-      <div class="field">
-        <p class="control">
-          <button type="submit" class="button is-normal">Comment</button>
-        </p>
-      </div>
-    </div>
-  </article>
-</div>
-       
+              <p class="control">
+                <button class="button is-success is-small" type="submit" id="comment-btn" data-id="{{ id }}">Comment</button>
+              </p>
+          </div>  
         </div>
       </div>
-    </div>
+</div>
 
-{{!-- <script src="/js/profile.js"></script> --}}
+
  

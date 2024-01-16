@@ -1,5 +1,5 @@
-  <div class="container">
-      <div class="notification ">
+<div class="container is-widescreen">
+      <div class="content is-normal ">
         <div class="card">
           <div class="card-header">
             <h3>{{meme.image}}</h3>
@@ -11,23 +11,22 @@
                 </p>
                 <p class="control">
                     <button class="button is-success is-small" id="delete-btn">Delete</button>
-                  </p>
-              </div>
+                </p>
+            </div>
           </div>          
       </div>
-
-          <div class="card-content">
+         <div class="card-content">
             <h3>Comments</h3>
-            {{ #each comments as |comment| }}
-            <div>
-                <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date comment.date_created}}</p>
-                  {{> comment-form}}
-            </div>
-            {{/each}}
-          </div>
-        </div>       
-      </div>
-    </div>
+           {{#each comments as |comment| }}
+         <div>
+           <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date comment.date_created}}</p>
+              {{> comment-form}}
+         </div>
+          {{/each}}
+       </div>
+     </div>       
+  </div>
+</div>
     
     <script src="/js/newComment.js"></script>
     <script src="/js/deletePost.js"></script>

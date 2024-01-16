@@ -10,7 +10,7 @@ async function newCommentHandler(event) {
     const post_id = url[url.length - 1];
   
     if (comment_body) {
-      const response = await fetch("/api/comment", {
+      const response = await fetch("/api/meme", {
         method: "POST",
         body: JSON.stringify({
           meme_id,

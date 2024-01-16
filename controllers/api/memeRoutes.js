@@ -1,12 +1,16 @@
 // Imports
 const router = require("express").Router();
-const { Meme } = require("../../models");
+const { Meme, User, Comment } = require("../../models");
 const withAuth = require("../../utils/auth");
 
 // GET route to retrieve all memes
-router.get('/memes', async (req, res) => {
+router.get('/meme', async (req, res) => {
   try {
-    const memes = await Meme.findAll();
+    const memes = await Meme.findAll({
+      include: [
+        User, Comment
+      ]
+    });
     res.json(memes);
   } catch (error) {
     console.error(error);
@@ -31,7 +35,7 @@ router.post("/", withAuth, async (req, res) => {
 });
 
 // Route to edit an existing meme post
-router.put("/profile/:id", withAuth, async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
   
   try {
     const memePostData = await Meme.update(req.body, {

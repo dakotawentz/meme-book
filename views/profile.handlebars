@@ -1,4 +1,4 @@
-   <div class="card columns is-centered" id="profile-template">
+<div class="card columns is-centered" id="profile-template">
       <div class="card-content">
         <div class="media">
           <div class="media-left">
@@ -17,8 +17,8 @@
         </div>
           </div>
         </div>       
-
-      <div class="card-content">
+</div>
+      <div class="container is-widescreen">
         {{#if memes.length}} 
 
         {{#each memes as |meme|}} 
@@ -28,14 +28,12 @@
         
         {{/if}}
       </div>
-    </div>
+    
     {{#if (is_my_page user.id userId)}}
-    <div class="container">
+    <div class="field is-grouped is-grouped-centered">
       <div class="card columns is-centered">
         <a href="/create"
-          ><button class="button is-success is-small">Create a Post</button></a
-        >
-        
+          ><button class="button is-success is-small">Create a Post</button></a>        
       </div>
       {{else}}
 
