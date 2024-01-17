@@ -5,6 +5,7 @@ const withAuth = require("../../utils/auth");
 
 // GET route to retrieve all memes
 router.get('/meme', async (req, res) => {
+  console.log('meme');
   try {
     const memes = await Meme.findAll({
       include: [

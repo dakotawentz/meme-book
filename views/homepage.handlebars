@@ -2,43 +2,20 @@
   {{! is-max-desktop }}
   <div class="content is-normal">
     {{! class="notification" }}
-    {{#each memes as |meme|}}
+       {{#each memes as |meme|}}
       <div class="card">
-        <div class="card-header">
-          <h3 class="is-hidden">
-            {{!-- <a href="/meme/{{meme.meme_id}}"></a> --}}
-            {{!-- {{meme.caption}} --}}
-          </h3>
-          {{!-- <p>Posted by
-            {{meme.user}}
-            on
-            {{format_date meme.date_created}}</p> --}}
-        </div>
+        <div class="card-header">          
         <div class="card-content">
-
           <a href="/meme">
-            <p>Posted by {{meme.user.first_name}}</p>
+            <p>Posted by {{meme.first_name}}</p>
             <p>{{meme.caption}}</p>
             <div class="card-body">
               <img src="/images/{{meme.image}}" alt="{{meme.caption}}" />
             </div>
-          </a>
-
-          {{!-- <h1>
-            <p>{{meme.caption}}</p>
-          </h1>
-          <a>
-            <div class="card-body">
-              <img src="/images/{{meme.image}}" alt="{{meme.caption}}" />
-            </div>
-          </a> 
-          <div class="field is-grouped is-grouped-centered">            
-              <p class="control">
-                <button class="button is-success is-small" type="submit" id="comment-btn" data-id="{{ id }}">Comment</button>
-              </p>
-          </div>          --}}
+          </a>          
         </div>
+       </div>
+       {{/each}}
       </div>
-    {{/each}}
   </div>
 </div>
