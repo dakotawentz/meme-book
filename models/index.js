@@ -4,16 +4,18 @@ const Comment = require('./Comments');
 
 Meme.belongsTo(User, {
     foreignKey: 'user_id',
+    onDelete: "CASCADE",
 });
 
 User.hasMany(Meme, {
     foreignKey: 'user_id',
+    onDelete: "CASCADE",
 });
 
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
-    as: 'user',
-    targetKey: 'id',
+    // as: 'user',
+    // targetKey: 'id',
 });
 
 User.hasMany(Comment, {
@@ -22,6 +24,7 @@ User.hasMany(Comment, {
 
 Comment.belongsTo(Meme, {
     foreignKey: 'meme_id',
+    onDelete: "CASCADE",
 });
 
 Meme.hasMany(Comment, {
